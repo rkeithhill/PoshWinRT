@@ -49,6 +49,8 @@
     <Reference Include="Windows" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsyncActionWrapper.cs" />
+    <Compile Include="AsyncInfoWrapper.cs" />
     <Compile Include="AsyncOperationWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

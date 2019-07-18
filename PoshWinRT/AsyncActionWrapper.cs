@@ -1,26 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Windows.Foundation;
 
 namespace PoshWinRT
 {
-    public class AsyncOperationWrapper<T> : AsyncInfoWrapper<IAsyncOperation<T>>
+    public class AsyncActionWrapper : AsyncInfoWrapper<IAsyncAction>
     {
-        public AsyncOperationWrapper(object asyncOperation) : base(asyncOperation) { }
+        public AsyncActionWrapper(object asyncAction) : base(asyncAction) { }
 
-        public object AwaitResult()
+        public void AwaitResult()
         {
-            return AwaitResult(-1);
+            AwaitResult(-1);
         }
 
-        public object AwaitResult(int millisecondsTimeout)
+        public void AwaitResult(int millisecondsTimeout)
         {
             var task = _asyncInfo.AsTask();
             task.Wait(millisecondsTimeout);
 
             if (task.IsCompleted)
             {
-                return task.Result;
+                return;
             }
             else if (task.IsFaulted)
             {
@@ -31,5 +34,6 @@ namespace PoshWinRT
                 throw new TaskCanceledException(task);
             }
         }
+
     }
 }
