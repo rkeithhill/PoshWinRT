@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.20623.1 VSUPREVIEW
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoshWinRT", "PoshWinRT\PoshWinRT.csproj", "{4E1D6B06-ACCC-491E-ABB9-631430AAF6BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PoshWinRT", "PoshWinRT\PoshWinRT.csproj", "{4E1D6B06-ACCC-491E-ABB9-631430AAF6BD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ECDE9C7F-4AF2-4F27-8A18-5B20285ED542}"
 	ProjectSection(SolutionItems) = preProject
@@ -36,5 +36,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32518D43-C74D-4224-84D0-784E0CD313A3}
 	EndGlobalSection
 EndGlobal
